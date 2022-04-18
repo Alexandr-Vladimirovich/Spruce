@@ -1,0 +1,128 @@
+.cards {
+	padding: 40px 0px 20px 0px;
+	border-bottom: 1px solid #333;
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+
+		padding: 0px 10px;
+		@media (min-width: em(1300)) {
+			gap: 1.875rem;
+		}
+		@media (max-width: em(1300)) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1rem;
+		}
+		@media (max-width: em(768)) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+		}
+		@media (max-width: em(507)) {
+			column-gap: rem(11);
+		}
+	}
+}
+.item-cards {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.2s;
+	@media (max-width: em(440)) {
+		min-width: rem(170);
+		min-width: 100%;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	&__wrapper {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		margin-bottom: 12px;
+		font-size: 0.975rem;
+		letter-spacing: 1px;
+		color: #385e83;
+		line-height: 1.2;
+		font-weight: 400;
+		@media (max-width: em(490)) {
+			margin-bottom: rem(6);
+			font-size: rem(14);
+		}
+	}
+	&__text {
+		margin-bottom: 14px;
+		font-size: rem(20);
+		font-weight: 500;
+		flex: 1 1 auto;
+		@media (max-width: em(490)) {
+			margin-bottom: rem(6);
+			font-size: rem(15);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__footer {
+		display: flex;
+		justify-content: flex-start;
+	}
+}
+.item-cards-ibg {
+	padding: 0px 0px 74.72473894% 0px;
+	object-position: center;
+	margin-bottom: 10px;
+}
+.footer-cards {
+	display: flex;
+	column-gap: 30px;
+	position: relative;
+	align-items: center;
+	padding: 4px;
+	@media (max-width: em(490)) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&::before {
+		display: block;
+		position: absolute;
+		content: "";
+		margin: 10px;
+		width: 1px;
+		height: 1.375rem;
+		background-color: #333;
+		left: 100px;
+		@media (max-width: em(490)) {
+			display: none;
+		}
+	}
+	&__item {
+		display: flex;
+		column-gap: 10px;
+		position: relative;
+		@media (max-width: em(490)) {
+			font-size: rem(14);
+		}
+	}
+}
+.cars-ratings {
+	&__list {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	&__item {
+		font-size: rem(20);
+		color: rgb(219, 219, 42);
+		@media (max-width: em(490)) {
+			font-size: rem(18);
+		}
+	}
+}

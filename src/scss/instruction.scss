@@ -1,0 +1,151 @@
+.item-instruction-ibg {
+	padding: 0px 0px 66.72473894% 0px;
+	object-position: center;
+}
+.instruction {
+	padding: 20px 0 30px 0;
+
+	&__title {
+		line-height: 1.6;
+		font-size: 30px;
+		font-weight: 500;
+		border-bottom: 3px dashed #ddd;
+		margin-bottom: 30px;
+	}
+	&__items {
+		margin-bottom: 50px;
+		list-style: none;
+	}
+	&__item {
+		margin-bottom: 30px;
+	}
+}
+.item-instruction {
+	position: relative;
+	padding-left: 50px;
+	&_van {
+		&::before {
+			content: "01";
+			position: absolute;
+			width: 10%;
+			height: 10%;
+			top: 3px;
+			left: 0;
+			color: #33618d;
+			font-size: 1.75rem;
+		}
+	}
+	&_two {
+		&::before {
+			content: "02";
+			position: absolute;
+			width: 10%;
+			height: 10%;
+			top: 3px;
+			left: 0;
+			color: #33618d;
+			font-size: 1.75rem;
+		}
+	}
+	&_three {
+		&::before {
+			content: "03";
+			position: absolute;
+			width: 10%;
+			height: 10%;
+			top: 3px;
+			left: 0;
+			color: #33618d;
+			font-size: 1.75rem;
+		}
+	}
+	&_four {
+		&::before {
+			content: "04";
+			position: absolute;
+			width: 10%;
+			height: 10%;
+			top: 3px;
+			left: 0;
+			color: #33618d;
+			font-size: 1.75rem;
+		}
+	}
+	&_five {
+		&::before {
+			content: "05";
+			position: absolute;
+			width: 10%;
+			height: 10%;
+			top: 3px;
+			left: 0;
+			color: #33618d;
+			font-size: 1.75rem;
+		}
+	}
+	&__title {
+		font-size: 20px;
+		text-align: left;
+		margin-bottom: 1rem;
+		letter-spacing: -0.1px;
+		line-height: math.div(0.7, 0.5);
+	}
+	
+}
+
+.search-instruction {
+	position: relative;
+	&__text {
+		padding: 0px 0px 20px 50px;
+		margin-bottom: 10px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -20px;
+			left: 30px;
+			width: 120px;
+			height: 40px;
+			border-top: 2px solid #e4965f;
+			border-left: 8px solid #e4965f;
+		}
+		@media (max-width: em(560)){
+			  margin-bottom: 0;
+		}
+	}
+	&__link {
+		border: 2px solid #e4965f;
+		padding: 5px 20px 5px 20px;
+		color: #333;
+		transition: all 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: #e4965f;
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;		
+		row-gap: 25px;
+		align-items: center;
+		column-gap: 10px;
+		padding-bottom: 10px;
+		cursor: pointer;
+		&::after {
+			content: "";
+			content: "";
+			position: absolute;
+			bottom: -1rem;
+			right: 0rem;
+			width: 120px;
+			height: 40px;
+			border-bottom: 2px solid #e4965f;
+			border-right: 8px solid #e4965f;
+		}
+		@media (max-width: em(600)){
+			padding: 0px 10px 10px 40px;
+		}
+	}
+}
