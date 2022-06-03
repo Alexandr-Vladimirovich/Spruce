@@ -1,11 +1,18 @@
 .header {
-	margin-top: 80px;
-	border-bottom: 1px solid  #d4e9fc;
-	border-top: 1px solid  #d4e9fc;
-	padding-top: 5px;
-	padding-bottom: 15px;
+
+	min-height: 70px;
+	border-bottom: 1px solid #d4e9fc;
+	border-top: 1px solid #d4e9fc;
+	display: flex;
+		justify-content:center;align-items: center;
+	position: fixed;
+	width: 100%;
+	background-color: #fff;
+	z-index: 111;
+	padding-bottom: 10px;
 
 	&__container {
+		
 	}
 
 	&__menu {
@@ -22,46 +29,43 @@
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		@include adaptiveValue("gap",50 ,10,1100,768,1 );
+		@include adaptiveValue("gap", 50, 10, 1100, 768, 1);
 	}
 
 	&__item ul {
-		display: none;   
+		display: none;
 		border: 1px solid#d4e9fc;
 		border-top: none;
 		margin-top: 15px;
 		padding: 10px;
+		position: absolute;
+		min-width: 200px;
+		z-index: 10;
+		background-color: #fff;
+		left: -50px;
+		top: 25px;
 	}
 	&__item ul li {
-	margin-bottom: 10px; 
-	
+		margin-bottom: 10px;
 	}
-	&__item ul li a{
-	margin-bottom: 10px; 
-	font-size: rem(20);
-	
+	&__item ul li a {
+		margin-bottom: 10px;
+		font-size: rem(20);
 	}
-	&__item  {
+	&__item {
 		position: relative;
 		background-color: #fff;
 	}
 	&__item:hover ul {
-		display: block;
-		position: absolute;
-		padding-top: 20px;
-		left: -70px;
-		min-width: 200px;
-		z-index: 10;
-		background-color: #fff;
-	
-		
+		display: inline-block;
 	}
 
 	&__link {
-		letter-spacing: .01875rem;
-    line-height: 1.2;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #222;
+		letter-spacing: 0.01875rem;
+		line-height: 1.2;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #222;
+		padding-bottom: 20px;
 	}
 }
