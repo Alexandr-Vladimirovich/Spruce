@@ -116,6 +116,13 @@ body {
 		max-width: 78.7rem;
 		padding: 0px 10px;
 	}
+	[class*="header__container-top"] {
+		
+		box-sizing: content-box;
+		margin: 0 auto;
+		max-width: 80.7rem;
+		padding: 0px 10px;
+	}
 	[class*="__container-autors"] {
 		max-width: rem(640);
 		box-sizing: content-box;
