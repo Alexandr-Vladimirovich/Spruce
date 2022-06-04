@@ -13,8 +13,6 @@
 	}
 
 	&__title {
-		text-align: center;
-		margin-bottom: 20px;
 		@include adaptiveValue("font-size", 50, 30, 768, 320, 1);
 	}
 	&__items {

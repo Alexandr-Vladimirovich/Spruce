@@ -1,1 +1,46 @@
-// Заголовки, общие БЄМ блоки и проче...
+h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.article {
+  &__content {
+    letter-spacing: -0.1px;
+    font-size: 1.2rem;
+    color: #000;
+    line-height: 1.6875;
+
+    & h2, & h3, & h4, & h5, & h6 {
+      @include adaptiveValue("margin-bottom", 15, 10);
+    }
+
+    & p {
+      margin-bottom: 15px;
+      letter-spacing: -0.1px;
+      font-size: rem(17);
+      color: #000;
+      line-height: 1.6875;
+      @include adaptiveValue("margin-bottom", 15, 10);
+    }
+
+    & a {
+        color: #008fb9;
+        border-bottom: 1px solid #008fb9;
+        transition: all 0.2s;
+        @media (any-hover: hover) {
+          &:hover {
+            color: #e4965f;
+            border-bottom: 1px solid #e4965f;
+          }
+      }
+    }
+  }
+}
